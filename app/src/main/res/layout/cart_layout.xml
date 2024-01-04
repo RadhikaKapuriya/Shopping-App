@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#B1BCBE"
+    tools:context=".view.MainActivity">
+
+    <RelativeLayout
+        android:id="@+id/cartheader"
+        android:layout_alignParentTop="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/light_gray"
+        >
+
+        <ImageView
+            android:id="@+id/backbutton"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_margin="4dp"
+            android:src="@drawable/ic_back"/>
+
+        <TextView
+            android:id="@+id/tvcartheader"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="My Cart"
+            android:layout_centerInParent="true"
+            android:textSize="16sp"
+            />
+
+    </RelativeLayout>
+
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerView"
+        android:layout_below="@id/cartheader"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:listitem="@layout/cart_rv_item"
+        android:layout_above="@+id/rlbottom"
+       />
+
+    <RelativeLayout
+        android:id="@+id/rlbottom"
+        android:layout_alignParentBottom="true"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:background="@drawable/bottom_bg"
+        >
+
+        <LinearLayout
+            android:id="@+id/llheader"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:orientation="vertical"
+            android:padding="10dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Total Amount"
+                android:textSize="14sp"
+                android:textColor="@color/gray"
+
+                />
+
+
+            <TextView
+            android:id="@+id/tvtotal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="7"
+            android:textSize="20sp"
+            android:textColor="@color/white"
+            android:textStyle="bold"/>
+        </LinearLayout>
+
+    <Button
+        android:id="@+id/doneButton"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:text="Done"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_margin="10dp"
+        />
+    </RelativeLayout>
+
+
+</RelativeLayout>
